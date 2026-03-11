@@ -1,0 +1,9 @@
+model Order {
+  id        String   @id @default(cuid())
+  product   String
+  currency  String
+  amount    Int
+  email     String
+  status    String   @default("pending")
+  createdAt DateTime @default(now())
+}
